@@ -1,0 +1,23 @@
+{
+  "name": "teste1",
+  "id": "com.danielalbuquerque.teste1",
+  "components": {
+    "advpl": {
+      "cloudbridge-core-advpl": "^0.1.4"
+    },
+    "bower": {
+      "cloudbridge-core-js": "^0.1.4",
+      "jquery": "^3.3.1",
+      "bootstrap": "^4.1.1"
+    }
+  },
+  "main": "src/web/index.html",
+  "bowerOverrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css"
+      ]
+    }
+  }
+}

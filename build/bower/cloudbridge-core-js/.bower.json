@@ -1,0 +1,19 @@
+{
+  "name": "cloudbridge-core-js",
+  "license": "MIT",
+  "main": "./cloudbridge-core.js",
+  "ignore": [],
+  "dependencies": {},
+  "version": "0.1.4",
+  "homepage": "https://github.com/TOTVSTEC/cloudbridge-core-js",
+  "_release": "0.1.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.4",
+    "commit": "a3788ba446960355d3767669520912f0d3f204df"
+  },
+  "_source": "https://github.com/TOTVSTEC/cloudbridge-core-js.git",
+  "_target": "^0.1.4",
+  "_originalSource": "cloudbridge-core-js",
+  "_direct": true
+}

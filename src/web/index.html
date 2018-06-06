@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<title>
+		teste1
+	</title>
+
+	<!-- build:css styles/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:css styles/app.css -->
+	<link rel="stylesheet" href="styles/app.css">
+	<link rel="stylesheet" href="styles/totvs.css">
+	<link rel="stylesheet" href="styles/totvs-navbar.css">
+	<link rel="stylesheet" href="styles/totvs-btn.css">
+	<link rel="stylesheet" href="styles/totvs-tabstrip.css">
+	<!-- endbuild -->
+</head>
+
+<body class="totvs">
+	<div class="splash">
+		<h1 class="splash-title">
+			teste1
+		</h1>
+		<img class="totvs-logo" src="images/totvs.png" />
+		<img class="cloudbridge-logo" src="images/cloudbridge.png" />
+	</div>
+
+	<div id="map" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Map</h4>
+				</div>
+				<div class="modal-body">
+					<iframe src="http://maps.google.com/?output=embed"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-fixed-top navbar-totvs">
+		<div class="container-fluid navbar-header-bg">
+			<div class="navbar-header">
+				<div>
+					<a class="navbar-brand navbar-logo" href="#">
+						<img alt="Brand" src="images/icon-home.png" width="24px">
+					</a>
+					<a class="navbar-brand">
+						teste1
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="app-body">
+		<div id='content-commands' class="container-fluid">
+			<h2 class="title">Acesso aos perifericos</h2>
+			<div class="row" style="padding: 10px;">
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='device_cam'>Captura imagem</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='device_barcode'>C&oacute;digo de barras</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='device_bt_paired'>Pareados</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='device_geolocation'>Geo Posi&ccedil;&atilde;o</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='device_orientation_lock'>Libera Orienta&ccedil;&atilde;o</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='device_orientation_unlock'>Trava Orienta&ccedil;&atilde;o</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='device_notify'>Notifica&ccedil;&atilde;o</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='device_vibrate'>Vibra&ccedil;&atilde;o</button>
+			</div>
+
+
+			<h2 class="title">Testa os perifericos</h2>
+			<div class="row" style="padding: 10px;">
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='test_bluetooth'>Testa BlueTooth</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='test_nfc'>Testa NFC</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='test_wifi'>Testa WIFI</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='test_gps'>Testa GPS</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='test_wifi_conn'>Conectado WIFI</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='test_3g_conn'>Conectado 3G</button>
+			</div>
+
+			<h2 class="title">Abre as configura&ccedil;&otilde;es</h2>
+			<div class="row" style="padding: 10px;">
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='config_bluetooth'>Abre BlueTooth</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='config_nfc'>Abre NFC</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='config_wifi'>Abre WIFI</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='config_gps'>Abre GPS</button>
+			</div>
+
+			<h2 class="title">Acesso ao SQLite</h2>
+			<div class="row" style="padding: 10px;">
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='db_create'>Cria Tabela</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='db_insert'>Insere Registros</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='db_delete'>Apaga Tabela</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='db_query'>Recupera dados</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='db_tables'>Lista Tabelas</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='db_rollback'>Processo c/ Rollback</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='db_commit'>Processo c/ Commit</button>
+			</div>
+
+			<h2 class="title">Miscel&acirc;nea</h2>
+			<div class="row" style="padding: 10px;">
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='misc_advpl'>runAdvpl</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='misc_message'>Troca de mensagens</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='misc_ajax'>Testar Ajax</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='misc_version'>Vers&atilde;o da Lib JS</button>
+				<button type="button" class="totvs-btn totvs-btn-primary col-xs-12 col-sm-6 col-md-3" id='misc_temp'>Diret&oacute;rio Tempor&aacute;rio</button>
+			</div>
+		</div>
+		<div id='content-log' class="container-fluid" style="display: none;">
+		</div>
+	</div>
+
+	<div class="totvs-tabstrip">
+		<div id="tab-commands" class="totvs-tab active">
+			<div class="totvs-tab-icon">
+				<span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+			</div>
+			<div class="totvs-tab-label">Comandos</div>
+		</div>
+		<div id="tab-log" class="totvs-tab">
+			<div class="totvs-tab-icon">
+				<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+				<br>
+			</div>
+			<div class="totvs-tab-label">Log</div>
+		</div>
+	</div>
+
+
+	<!-- build:js scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="bower/cloudbridge-core-js/cloudbridge-core.js"></script>
+	<script src="bower/jquery/dist/jquery.js"></script>
+	<script src="bower/bootstrap/dist/js/bootstrap.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:js scripts/app.js -->
+	<script src="scripts/app.js"></script>
+	<!-- endbuild -->
+</body>
+
+</html>
